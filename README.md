@@ -40,3 +40,15 @@
 - `list.split(’ ‘)` changes a string into an array. each item is declared at the ‘ ‘.
 - `string.replace('Brad' , 'Jack)` will replace ‘Brad’ in the string with ‘Jack’
 - `string.includes('hello')` will return true as ‘hello’ is included in the string.
+
+### Array Methods
+
+- `array.length` gives length of array
+- `Array.isArray(array)` checks to see if something is an array. returns true or false.
+- `push() , pop(), shift(), unshift()` add remove items to start/end of an array.
+- `array.splice (1,3)` remove items at start and end value.
+- `array.reverse()` reverse array.
+- `val = array.concat(numbers2)` concatinates (sticks) two arrays together into one array.
+- `val= fruit.sort()` sorts into alphabetical order. works for strings. if you use it on numbers it will sort by the first number.; basically not useful.
+- `val = numbers.sort(function(x,y){ return x-y})` this will return numbers in order; lowest to highest
+- `val = numbers.sort(function(x,y){ return x-y})` this will return numbers in order. highest to lowest.
