@@ -102,3 +102,55 @@ console.log('Delete todo...')}
 
 todo.delete();
 ```
+### Loops
+
+#### for loop
+
+ `break` can be used to end a loop 
+
+`continue` useful. see example below
+
+```jsx
+for (let i =0; i <10; i++) {
+if (i === 2){
+console.log('2 is my favorite number')
+continue;
+//continue used to continue the loop. without printing 'number 2'
+}
+if(i === 5){
+console.log('stop the loop');
+break;
+}
+console.log('Number' +i);
+}
+
+```
+
+#### forEach()
+
+- loops through array same way as for loop, just much cleaner.
+- mutates original array
+
+```jsx
+const cars = ['honda', 'ford', 'Rover']
+cars.forEach(function(car){
+	console.log(car)
+```
+
+#### map()
+
+- similar to forEach but creates new array. immutable. used in React.
+- used this a lot in React. familiar with it.
+
+```jsx
+const users =[
+{id:1, name: 'John'}
+{id:2, name: 'Suz'}
+{id:3, name: 'Bob'}
+const ids = users.map(function(user){
+return user.id;
+})
+console.log(ids)
+```
+
+this will return an array of the ids
