@@ -52,3 +52,53 @@
 - `val= fruit.sort()` sorts into alphabetical order. works for strings. if you use it on numbers it will sort by the first number.; basically not useful.
 - `val = numbers.sort(function(x,y){ return x-y})` this will return numbers in order; lowest to highest
 - `val = numbers.sort(function(x,y){ return x-y})` this will return numbers in order. highest to lowest.
+
+### Date and times
+
+- `let today = new Date();` by default will return today’s date. this is an object.
+- `let birthday= new Date('9-10-1981');` gives date at this specified date.
+- `let birthday= new Date('September 10 1981')`
+- `let birthday= new Date('9/10/1981');` several ways to declare date.
+
+### Functions
+
+- `function greet (first = 'John' , last ='Doe') {}` This is how you can set default values in functions.
+- functions expressions are usually better than declarations.
+
+#### IIFEs - Immediately Invokable Function Expressions.
+
+- functions you can declare and run at the same time.
+
+```jsx
+(function(name) {
+	console.log('IIFE Ran..hello ${name}`);
+})('brad');
+```
+
+- useful for certain patterns. e.g. module patterns.
+
+#### Property methods
+
+- creating functions inside of objects.
+```
+const todo ={
+add:function(){
+console.log('add todo..');
+},
+edit: function(id){
+console.log(`edit todo ${id});
+}
+}
+
+//calling the functions
+
+todo.add()
+todo.edit(22)
+
+//adding new function to object
+
+todo.delete = function(){
+console.log('Delete todo...')}
+
+todo.delete();
+```
