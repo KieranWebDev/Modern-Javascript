@@ -21,3 +21,22 @@
 - `Math.max(2.8, 44, 6,88, 54)` returns the largest number in the list
 - `Math.random()` gives random decimal.
 - `Math.floor(Math.random()*20+1)`  will return a random number between 1 and 20 and round it down to the nearest number.
+
+### String Methods:
+
+- `'that\'s awesome., I can/'t wait'`  using \ allows the use of apostrophes in strings.
+- `fisttName.length` gives length of string or array. it’s a property not a method, so doesn't need ()
+- `firstName.concat(' ', lastName)` method for concatenation.
+- `firstName.toUpperCase()`
+- `firstName.toLowerCase()`
+- `firstName[2]` gives second index of string
+- `firstName.indexOf('b')` will look for b in the string and return the index of it. gives the first example of b
+- `FirstName.lasIndexof()` opposite of above.
+- `firstName.charAt('2')` will return the letter at the index of 2
+- `firstName.charAt(firstName.length -1)` gives last character of string.
+- `firstName.subString(0, 4)` returns string starting at index of 0 and ending at 4. ie. the first 4 characters of a string.
+- `firstName.slice(0,4)` very similar to subString.  but…
+- `firstName.slice(-3)` a difference is that you can put in a negative number. it’ll start from the back and return the last 3 characters in the string.  Often used with arrays.
+- `list.split(’ ‘)` changes a string into an array. each item is declared at the ‘ ‘.
+- `string.replace('Brad' , 'Jack)` will replace ‘Brad’ in the string with ‘Jack’
+- `string.includes('hello')` will return true as ‘hello’ is included in the string.
