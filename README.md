@@ -155,7 +155,7 @@ console.log(ids)
 
 this will return an array of the ids
 
-#DOM Manipulation and events
+# DOM Manipulation and events
 
 - `Document` is part of the `window` object
 - `getElementById` , `getElementByClassName` , `querySelector` , `querySecelctorAll` can be used to select items in the DOM. QuerySelector is the most powerful.
