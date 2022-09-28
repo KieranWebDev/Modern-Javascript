@@ -154,3 +154,14 @@ console.log(ids)
 ```
 
 this will return an array of the ids
+
+#DOM Manipulation and events
+
+- `Document` is part of the `window` object
+- `getElementById` , `getElementByClassName` , `querySelector` , `querySecelctorAll` can be used to select items in the DOM. QuerySelector is the most powerful.
+- QuerySelector can be used to target classes, id’s and elements (.e.g h2)
+- `.innerText` and `.textContent` can be used to change text in an element
+- `innerHTML` to add elements. e.g <span>
+- `document.querySelector('li:last-child').style.color = 'red'` can select pseudo-classes this way.
+- selecting multiple elements `getElementsByClassName` , `querySelecetorAll` , `getElementsById` , `getElementsByTagName`
+- `querySelectorAll` returns a nodeList.  Allows you to use array methods on the items without converting it to an array using `let arrayNameArray.from(arrayName)`
