@@ -10,6 +10,8 @@ function loadEventListeners() {
   form.addEventListener('submit', addTask);
   //remove task event
   taskList.addEventListener('click', removeTask);
+
+  clearBtn.addEventListener('click', clearTasks);
 }
 //add Task
 function addTask(e) {
@@ -49,6 +51,16 @@ function removeTask(e) {
       console.log(e.target);
     }
   }
+}
+
+function clearTasks() {
+  if (confirm('Are you sure you want to clear the task list?')) {
+    taskList.innerHTML = '';
+  }
+  //alternative way (faster)
+  //   while (taskList.firstChild) {
+  //     taskList.removeChild(taskList.firstChild);
+  //   }
 }
 
 //Load all event listeners
