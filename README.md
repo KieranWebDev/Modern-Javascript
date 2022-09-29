@@ -165,3 +165,12 @@ this will return an array of the ids
 - `document.querySelector('li:last-child').style.color = 'red'` can select pseudo-classes this way.
 - selecting multiple elements `getElementsByClassName` , `querySelecetorAll` , `getElementsById` , `getElementsByTagName`
 - `querySelectorAll` returns a nodeList.  Allows you to use array methods on the items without converting it to an array using `let arrayNameArray.from(arrayName)`
+- `.children` use this method to return HTML collection. e.g. `ul.children` returns list items.
+- `list.children.children` you can chain these reach grandchildren etc
+- `list.children[3]` we can use this to access specific elements in the list (array)
+- `list.firstElementChild`, `list.lastElementChild` Can use these to access first/last element in the list(array)
+- `.list.ChildElementCount` counts number of children elements a property has
+- `listItem.parentElement` access paretn element of an element
+- `listItem.parentElement.paretnElement` You can chain these together to go further up the tree
+- `listItem.nextElementSibling` access next sibling of item. can also be chained e.g `listItem.nextElementSibling.nextElementSibling`
+- `listItem.previousElementSibling` access previous sibling.
