@@ -223,3 +223,50 @@ function onClick(e){
   // Event type
   val = e.type;
 ```
+### MouseEvents
+```
+	const clearBtn = document.querySelector('.clear-tasks');
+const card = document.querySelector('.card');
+const heading = document.querySelector('h5');
+
+// Click
+clearBtn.addEventListener('click', runEvent);
+// Doubleclick
+clearBtn.addEventListener('dblclick', runEvent);
+// Mousedown
+clearBtn.addEventListener('mousedown', runEvent);
+// Mouseup
+clearBtn.addEventListener('mouseup', runEvent);
+// Mouseenter
+card.addEventListener('mouseenter', runEvent);
+// Mouseleave
+card.addEventListener('mouseleave', runEvent);
+// Mouseover
+card.addEventListener('mouseover', runEvent);
+// Mouseout
+card.addEventListener('mouseout', runEvent);
+// Mousemove
+card.addEventListener('mousemove', runEvent);
+
+// Event Handler
+function runEvent(e) {
+  console.log(`EVENT TYPE: ${e.type}`);}
+```
+Local Storage
+
+```
+//Store data in local storage
+local.storage.setItem('name', 'mario'); //key and value
+local.storage.setItem('age', '30')
+
+//get data from local storage
+let name = localStorage.getItem('name')
+console.log(name)
+
+//updating data
+localStorage.setItem('name', 'luigi'); //overwrites previous name. 
+
+//deleting data from local storage.
+localStorage.removeItem('name')
+localStorage.clear() //deletes all local storage
+```
