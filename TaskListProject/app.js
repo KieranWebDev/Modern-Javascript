@@ -8,6 +8,8 @@ const taskInput = document.querySelector('#task');
 function loadEventListeners() {
   //add task event
   form.addEventListener('submit', addTask);
+  //remove task event
+  taskList.addEventListener('click', removeTask);
 }
 //add Task
 function addTask(e) {
@@ -35,6 +37,18 @@ function addTask(e) {
     console.log(li);
   }
   e.preventDefault();
+}
+
+function removeTask(e) {
+  //targeting ancher tag element - default was selecting i(framer motion icon)
+  if (e.target.parentElement.classList.contains('delete-item')) {
+    //confirm delete
+    if (confirm('are you sure?')) {
+      //remove item
+      e.target.parentElement.parentElement.remove();
+      console.log(e.target);
+    }
+  }
 }
 
 //Load all event listeners
