@@ -10,8 +10,10 @@ function loadEventListeners() {
   form.addEventListener('submit', addTask);
   //remove task event
   taskList.addEventListener('click', removeTask);
-
+  //clear tasks
   clearBtn.addEventListener('click', clearTasks);
+  //filter tasks
+  filter.addEventListener('keyup', filterTasks);
 }
 //add Task
 function addTask(e) {
@@ -63,5 +65,18 @@ function clearTasks() {
   //   }
 }
 
+function filterTasks(e) {
+  const text = e.target.value.toLowerCase();
+
+  document.querySelectorAll('.collection-item').forEach(function (task) {
+    const item = task.firstChild.textContent;
+    if (item.toLowerCase().indexOf(text) != -1) {
+      task.style.display = 'block';
+    } else {
+      task.style.display = 'none';
+    }
+  });
+  console.log(text);
+}
 //Load all event listeners
 loadEventListeners();
