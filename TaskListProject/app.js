@@ -3,3 +3,39 @@ const taskList = document.querySelector('.collection');
 const clearBtn = document.querySelector('.clear-tasks');
 const filter = document.querySelector('#filter');
 const taskInput = document.querySelector('#task');
+
+//Load all event listeners
+function loadEventListeners() {
+  //add task event
+  form.addEventListener('submit', addTask);
+}
+//add Task
+function addTask(e) {
+  if (taskInput.value === '') {
+    alert('Add a task, please.');
+  } else {
+    //create li element
+    const li = document.createElement('li');
+    // add class
+    li.className = 'collection-item';
+    //create text nod and append to li
+    li.appendChild(document.createTextNode(taskInput.value));
+    //create new link element
+    const link = document.createElement('a');
+    //add class
+    link.className = 'delete-item secondary-content';
+    //add icon html
+    link.innerHTML = '<i class="fa fa-remove"></i>';
+    //add  link to li
+    li.appendChild(link);
+    //add li to ul
+    taskList.appendChild(li);
+    //clearinput
+    taskInput.value = '';
+    console.log(li);
+  }
+  e.preventDefault();
+}
+
+//Load all event listeners
+loadEventListeners();
