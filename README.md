@@ -154,3 +154,119 @@ console.log(ids)
 ```
 
 this will return an array of the ids
+
+# DOM Manipulation and events
+
+- `Document` is part of the `window` object
+- `getElementById` , `getElementByClassName` , `querySelector` , `querySecelctorAll` can be used to select items in the DOM. QuerySelector is the most powerful.
+- QuerySelector can be used to target classes, id’s and elements (.e.g h2)
+- `.innerText` and `.textContent` can be used to change text in an element
+- `innerHTML` to add elements. e.g <span>
+- `document.querySelector('li:last-child').style.color = 'red'` can select pseudo-classes this way.
+- selecting multiple elements `getElementsByClassName` , `querySelecetorAll` , `getElementsById` , `getElementsByTagName`
+- `querySelectorAll` returns a nodeList.  Allows you to use array methods on the items without converting it to an array using `let arrayNameArray.from(arrayName)`
+- `.children` use this method to return HTML collection. e.g. `ul.children` returns list items.
+- `list.children.children` you can chain these reach grandchildren etc
+- `list.children[3]` we can use this to access specific elements in the list (array)
+- `list.firstElementChild`, `list.lastElementChild` Can use these to access first/last element in the list(array)
+- `.list.ChildElementCount` counts number of children elements a property has
+- `listItem.parentElement` access paretn element of an element
+- `listItem.parentElement.paretnElement` You can chain these together to go further up the tree
+- `listItem.nextElementSibling` access next sibling of item. can also be chained e.g `listItem.nextElementSibling.nextElementSibling`
+- `listItem.previousElementSibling` access previous sibling.
+	
+### Creating Elements
+
+- `li.className = 'main-item'`   add a class to list item
+- `li.id = 'main'` adds id to list item
+- `li.setAttribute('title', 'New Item'` adds attribute to list item
+- `li.appendChild(document.creatTextNode('hello world')` creates text node and appends to list
+
+example
+
+- `const link = document.creatElement('a)` creates a link element
+- `link.innerHTML = ‘<i class=’fa bla bla></i>` adds html
+- `li.appendChild(link)` adds the link to the list element
+- `document.querySelector('ul.collection').appendChild(li)` appends li as child to ul
+
+ 
+
+### Replacing and removing elements
+
+- `.remove()`
+- `.removeChild()`
+- `.replaceChild`
+- `val.classList.add(’test’)` adds a class
+- `val.classList.remove(’test’)` removes class
+- `link.setAttribute(’href’, ‘http://google,com’)` replace the link in ancher tag. can be used to replace other attributes also.
+- `link.hasAtribute(’title’)` check for attribute and returns boolean value
+- `link.removeAttribute(’title’)` removes attribute. eg. link, value etc.
+
+### Event Listeners and even Object
+
+```
+document.querySelector('.clear-tasks').addEventListener('click', onClick);
+
+function onClick(e){
+  //console.log('Clicked');
+
+  let val;
+
+  val = e;
+
+  // Event target element
+  val = e.target;
+  val = e.target.id;
+  val = e.target.className;
+  val = e.target.classList;
+
+  // Event type
+  val = e.type;
+```
+### MouseEvents
+```
+	const clearBtn = document.querySelector('.clear-tasks');
+const card = document.querySelector('.card');
+const heading = document.querySelector('h5');
+
+// Click
+clearBtn.addEventListener('click', runEvent);
+// Doubleclick
+clearBtn.addEventListener('dblclick', runEvent);
+// Mousedown
+clearBtn.addEventListener('mousedown', runEvent);
+// Mouseup
+clearBtn.addEventListener('mouseup', runEvent);
+// Mouseenter
+card.addEventListener('mouseenter', runEvent);
+// Mouseleave
+card.addEventListener('mouseleave', runEvent);
+// Mouseover
+card.addEventListener('mouseover', runEvent);
+// Mouseout
+card.addEventListener('mouseout', runEvent);
+// Mousemove
+card.addEventListener('mousemove', runEvent);
+
+// Event Handler
+function runEvent(e) {
+  console.log(`EVENT TYPE: ${e.type}`);}
+```
+Local Storage
+
+```
+//Store data in local storage
+local.storage.setItem('name', 'mario'); //key and value
+local.storage.setItem('age', '30')
+
+//get data from local storage
+let name = localStorage.getItem('name')
+console.log(name)
+
+//updating data
+localStorage.setItem('name', 'luigi'); //overwrites previous name. 
+
+//deleting data from local storage.
+localStorage.removeItem('name')
+localStorage.clear() //deletes all local storage
+```
