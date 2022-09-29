@@ -174,3 +174,52 @@ this will return an array of the ids
 - `listItem.parentElement.paretnElement` You can chain these together to go further up the tree
 - `listItem.nextElementSibling` access next sibling of item. can also be chained e.g `listItem.nextElementSibling.nextElementSibling`
 - `listItem.previousElementSibling` access previous sibling.
+	
+### Creating Elements
+
+- `li.className = 'main-item'`   add a class to list item
+- `li.id = 'main'` adds id to list item
+- `li.setAttribute('title', 'New Item'` adds attribute to list item
+- `li.appendChild(document.creatTextNode('hello world')` creates text node and appends to list
+
+example
+
+- `const link = document.creatElement('a)` creates a link element
+- `link.innerHTML = ‘<i class=’fa bla bla></i>` adds html
+- `li.appendChild(link)` adds the link to the list element
+- `document.querySelector('ul.collection').appendChild(li)` appends li as child to ul
+
+ 
+
+### Replacing and removing elements
+
+- `.remove()`
+- `.removeChild()`
+- `.replaceChild`
+- `val.classList.add(’test’)` adds a class
+- `val.classList.remove(’test’)` removes class
+- `link.setAttribute(’href’, ‘http://google,com’)` replace the link in ancher tag. can be used to replace other attributes also.
+- `link.hasAtribute(’title’)` check for attribute and returns boolean value
+- `link.removeAttribute(’title’)` removes attribute. eg. link, value etc.
+
+### Event Listeners and even Object
+
+```
+document.querySelector('.clear-tasks').addEventListener('click', onClick);
+
+function onClick(e){
+  //console.log('Clicked');
+
+  let val;
+
+  val = e;
+
+  // Event target element
+  val = e.target;
+  val = e.target.id;
+  val = e.target.className;
+  val = e.target.classList;
+
+  // Event type
+  val = e.type;
+```
